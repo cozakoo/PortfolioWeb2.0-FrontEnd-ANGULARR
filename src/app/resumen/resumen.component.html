@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="resumen.component.css" media="screen">
+
+<section class="content" id="about">
+    <div class="block-content">
+        <h3 class="block-title">Perfil</h3>
+        <h3 class="subheading">¡Hola! soy Martín Arcos <strong>Analista Programador Universitario & Desarrollador
+                Full Stack Web</strong></h3>
+        <p>Developer Full Stack Web Junior con más de 2 años de experiencia. Especializado en desarrollo front end y
+            back end. Experimentado con todas las etapas del ciclo de desarrollo para proyectos web dinámicos. Tengo
+            un
+            conocimiento profundo incluyendo HTML5 avanzado, CSS, CSS3, SASS, JSON, Java, JavaScript,
+            JQuery, Angular JS, Ruby on Rails.</p>
+        <div class="info-list row">
+            <div class="col-sm-6"><span>Nombre : </span> Martín Arcos Vargas</div>
+            <div class="col-sm-6"><span>Fecha de Nacimiento : </span> 12 de Agosto de 1998</div>
+            <div class="col-sm-6"><span>Dirección : </span> Argentina, Chubut, Gaiman.</div>
+            <div class="col-sm-6"><span>Email : </span> martinarcosvargas2@gmail.com</div>
+            <div class="col-sm-6"><span>Telefono : </span> + 54 9 280 450 5803</div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Profesional</h3>
+        <div *ngFor="let profex of cv.profesional">
+            <label class="progress-bar-label">{{ profex.nombre }}</label>
+            <div class="progress">
+                <div [style.width.%]=profex.valor class="progress-bar" role="progressbar"
+                    attr.aria-valuenow="{{ profex.valor }}" aria-valuemin="0" aria-valuemax="100">
+                    <span>{{ profex.valor }}%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Experiencia</h3>
+        <div class="timeline experience">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-holder">
+                        <div *ngFor="let expex of cv.experiencia">
+                            <div class="exp">
+                                <div class="hgroup">
+                                    <h4><span>{{ expex.Empresa }}</span> - {{ expex.Cargo }}</h4>
+                                    <h5> {{ expex.Fecha }} </h5>
+                                </div>
+                                <p>{{ expex.Descripcion }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Educación</h3>
+        <div class="timeline education">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-holder">
+                        <div *ngFor="let edux of cv.educacion">
+                            <div class="exp">
+                                <div class="hgroup">
+                                    <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver
+                                                Certificado</span></a></h4>
+                                    <h5>{{ edux.Fecha }}</h5>
+                                </div>
+                                <p>{{ edux.Descripcion }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Servicios</h3>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 service">
+                <div class="service-icon">
+                    <i class="ion-laptop"></i>
+                </div>
+                <h4>Diseño Web</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    ut
+                    laoreet.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 service">
+                <div class="service-icon">
+                    <i class="ion-pie-graph"></i>
+                </div>
+                <h4>Desarrollo de Software</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    ut
+                    laoreet.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 service">
+                <div class="service-icon">
+                    <i class="ion-pie-graph"></i>
+                </div>
+                <h4>Tester QA Manual</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    ut
+                    laoreet.</p>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <h3 class="block-title">Testimonios</h3>
+        <div class="row">
+            <div id="liontestimonial" class="owl-carousel owl-theme">
+                <div *ngFor="let testix of cv.testimonio">
+                    <div class="item testimonials">
+                        <img src="assets\images\testimonials\1.jpeg" alt="">
+                        <blockquote>{{ testix.Descripcion }}
+                            <p class="quote"><span>{{ testix.Nombre }}</span> - {{ testix.Cargo }}</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 btn-email">
+            <a class="btn lowercase">poner un correo</a>
+        </div>
+    </div>
+</section>
