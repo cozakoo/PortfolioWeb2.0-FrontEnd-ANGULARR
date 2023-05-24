@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CvmartinArcosService } from '../services/cvmartinArcos.service';
+import { CvmartinArcosService } from '../services/cvmartin-arcos.service';
 
 @Component({
   selector: 'app-resumen',
@@ -8,8 +8,9 @@ import { CvmartinArcosService } from '../services/cvmartinArcos.service';
 })
 export class ResumenComponent implements OnInit {
 
-  constructor(public cv: CvmartinArcosService) { }
+  constructor(public cv: CvmartinArcosService) {
 
+  }
   ngOnInit(): void {
   }
 

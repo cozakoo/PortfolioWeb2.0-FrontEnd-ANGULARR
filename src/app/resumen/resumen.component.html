@@ -23,9 +23,9 @@
         <div *ngFor="let profex of cv.profesional">
             <label class="progress-bar-label">{{ profex.nombre }}</label>
             <div class="progress">
-                <div [style.width.%]=profex.valor class="progress-bar" role="progressbar"
-                    attr.aria-valuenow="{{ profex.valor }}" aria-valuemin="0" aria-valuemax="100">
-                    <span>{{ profex.valor }}%</span>
+                <div [style.width.%]=profex.porcentaje class="progress-bar" role="progressbar"
+                    attr.aria-valuenow="{{ profex.porcentaje }}" aria-valuemin="0" aria-valuemax="100">
+                    <span>{{ profex.porcentaje }}%</span>
                 </div>
             </div>
         </div>
@@ -39,10 +39,10 @@
                         <div *ngFor="let expex of cv.experiencia">
                             <div class="exp">
                                 <div class="hgroup">
-                                    <h4><span>{{ expex.Empresa }}</span> - {{ expex.Cargo }}</h4>
-                                    <h5> {{ expex.Fecha }} </h5>
+                                    <h4><span>{{ expex.nombre }}</span> - {{ expex.fecha }}</h4>
+                                    <h5> {{ expex.fecha }} </h5>
                                 </div>
-                                <p>{{ expex.Descripcion }}</p>
+                                <p>{{ expex.descripcion }}</p>
                             </div>
                         </div>
                     </div>
@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+
     <div class="block-content">
         <h3 class="block-title">Educación</h3>
         <div class="timeline education">
@@ -59,11 +60,11 @@
                         <div *ngFor="let edux of cv.educacion">
                             <div class="exp">
                                 <div class="hgroup">
-                                    <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver
-                                                Certificado</span></a></h4>
-                                    <h5>{{ edux.Fecha }}</h5>
+                                    <h4>{{ edux.nombre }} | <a href="{{ edux.url }}" target="_blank"><span>Ver
+                                                Certificaxxdo</span></a></h4>
+                                    <h5>{{ edux.fecha }}</h5>
                                 </div>
-                                <p>{{ edux.Descripcion }}</p>
+                                <p>{{ edux.descripcion }}</p>
                             </div>
                         </div>
                     </div>
@@ -110,8 +111,8 @@
                 <div *ngFor="let testix of cv.testimonio">
                     <div class="item testimonials">
                         <img src="assets\images\testimonials\1.jpeg" alt="">
-                        <blockquote>{{ testix.Descripcion }}
-                            <p class="quote"><span>{{ testix.Nombre }}</span> - {{ testix.Cargo }}</p>
+                        <blockquote>{{ testix.descripcion }}
+                            <p class="quote"><span>{{ testix.nombre }}</span> - {{ testix.puesto }}</p>
                         </blockquote>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
     </div>
     <div class="row text-center">
         <div class="col-md-12 btn-email">
-            <a class="btn lowercase">poner un correo</a>
+            <a class="btn lowercase">martinarcosvargas2@gmail.com</a>
         </div>
     </div>
 </section>

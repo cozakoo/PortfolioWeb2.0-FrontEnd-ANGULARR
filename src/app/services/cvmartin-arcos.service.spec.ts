@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CvmartinArcosService } from './cvmartinArcos.service';
+import { CvmartinArcosService } from './cvmartin-arcos.service';
 
-describe('CvmartinArcos', () => {
+describe('CvmartinArcosService', () => {
   let service: CvmartinArcosService;
 
   beforeEach(() => {
