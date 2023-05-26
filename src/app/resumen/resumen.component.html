@@ -3,17 +3,20 @@
 <section class="content" id="about">
     <div class="block-content">
         <h3 class="block-title">Perfil</h3>
-        <h3 class="subheading">¡Hola! soy Martín Arcos <strong>Analista Programador Universitario & Desarrollador
-                Full Stack Web</strong></h3>
-        <p>Developer Full Stack Web Junior con más de 2 años de experiencia. Especializado en desarrollo front end y
-            back end. Experimentado con todas las etapas del ciclo de desarrollo para proyectos web dinámicos. Tengo
-            un
-            conocimiento profundo incluyendo HTML5 avanzado, CSS, CSS3, SASS, JSON, Java, JavaScript,
-            JQuery, Angular JS, Ruby on Rails.</p>
+        <h3 class="subheading">¡Hola! soy Martín Arcos <strong>Analista Programador & Desarrollador
+                de Software</strong></h3>
+        <p id="perfilResumen">Soy un estudiante próximo a graduarme como Analista Programador con una sólida formación
+            académica y pasión
+            por la programación. A través de mi carrera, he adquirido habilidades en lenguajes de programación como
+            Java, C++, JavaScript, Python, Ruby on Railse, entre otros. Tambien he adquirido habilidades como
+            conocimientos en el diseño y desarrollo de aplicaciones y bases de datos. Mi enfoque se centra en la
+            resolución de problemas y el desarrollo de soluciones eficientes. Soy un aprendiz rápido, creativo y
+            orientado a resultados, con una fuerte ética de trabajo y capacidad para trabajar de manera efectiva tanto
+            de forma independiente como en equipo.</p>
         <div class="info-list row">
             <div class="col-sm-6"><span>Nombre : </span> Martín Arcos Vargas</div>
             <div class="col-sm-6"><span>Fecha de Nacimiento : </span> 12 de Agosto de 1998</div>
-            <div class="col-sm-6"><span>Dirección : </span> Argentina, Chubut, Gaiman.</div>
+            <div class="col-sm-6"><span>Dirección : </span> Gaiman, Chubut, Argentina.</div>
             <div class="col-sm-6"><span>Email : </span> martinarcosvargas2@gmail.com</div>
             <div class="col-sm-6"><span>Telefono : </span> + 54 9 280 450 5803</div>
         </div>
@@ -25,7 +28,7 @@
             <div class="progress">
                 <div [style.width.%]=profex.porcentaje class="progress-bar" role="progressbar"
                     attr.aria-valuenow="{{ profex.porcentaje }}" aria-valuemin="0" aria-valuemax="100">
-                    <span>{{ profex.porcentaje }}%</span>
+                    <span id="porcentaje">{{ profex.porcentaje }}%</span>
                 </div>
             </div>
         </div>
@@ -38,9 +41,10 @@
                     <div class="exp-holder">
                         <div *ngFor="let expex of cv.experiencia">
                             <div class="exp">
-                                <div class="hgroup">
-                                    <h4><span>{{ expex.nombre }}</span> - {{ expex.fecha }}</h4>
-                                    <h5> {{ expex.fecha }} </h5>
+                                <div id="fecha" class="hgroup">
+                                    <h4><strong><span id="nombreExperiencia">{{ expex.nombre }}</span></strong> - {{
+                                        expex.empresa }} </h4>
+                                    {{ expex.fecha }}
                                 </div>
                                 <p>{{ expex.descripcion }}</p>
                             </div>
@@ -59,12 +63,22 @@
                     <div class="exp-holder">
                         <div *ngFor="let edux of cv.educacion">
                             <div class="exp">
-                                <div class="hgroup">
-                                    <h4>{{ edux.nombre }} | <a href="{{ edux.url }}" target="_blank"><span>Ver
-                                                Certificaxxdo</span></a></h4>
-                                    <h5>{{ edux.fecha }}</h5>
+                                <div id="fecha" class="hgroup">
+                                    <h4>
+                                        <strong>
+                                            <span id="nombreExperiencia">
+                                                {{ edux.estudio }}
+                                            </span>
+                                        </strong>
+                                         - 
+                                        <a href="{{ edux.url }}" target="_blank">
+                                            <span id="nombreExperiencia">{{edux.lugar }}</span>
+                                        </a>
+                                    </h4>
+                                    {{ edux.fecha }}
                                 </div>
                                 <p>{{ edux.descripcion }}</p>
+
                             </div>
                         </div>
                     </div>
@@ -72,6 +86,7 @@
             </div>
         </div>
     </div>
+
     <div class="block-content">
         <h3 class="block-title">Servicios</h3>
         <div class="row">
@@ -80,27 +95,24 @@
                     <i class="ion-laptop"></i>
                 </div>
                 <h4>Diseño Web</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                    ut
-                    laoreet.</p>
+                <p>Crear y mantener un sitio web que sea funcional en internet, a través de diferentes
+                    lenguajes de programación, según el modelo y la parte de la página que corresponda.</p>
             </div>
             <div class="col-md-4 col-sm-6 service">
                 <div class="service-icon">
                     <i class="ion-pie-graph"></i>
                 </div>
                 <h4>Desarrollo de Software</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                    ut
-                    laoreet.</p>
+                <p>Proceso para crear software de computadora utilizando uno o más lenguajes de programación
+                    informática dedicada al proceso de creación, diseño, despliegue y compatibilidad de software.</p>
             </div>
             <div class="col-md-4 col-sm-6 service">
                 <div class="service-icon">
-                    <i class="ion-pie-graph"></i>
-                </div>
+                    <i class="ion-laptop"></i>
+                </div>                
                 <h4>Tester QA Manual</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                    ut
-                    laoreet.</p>
+                <p>Ejecutar el conjunto de tareas sistemáticas y planificadas que se aplican dentro de un sistema de
+                    gestión de calidad de un producto o servicio.</p>
             </div>
         </div>
     </div>
@@ -109,10 +121,10 @@
         <div class="row">
             <div id="liontestimonial" class="owl-carousel owl-theme">
                 <div *ngFor="let testix of cv.testimonio">
-                    <div class="item testimonials">
+                    <div id="div_testimonio"class="item testimonials">
                         <img src="assets\images\testimonials\1.jpeg" alt="">
-                        <blockquote>{{ testix.descripcion }}
-                            <p class="quote"><span>{{ testix.nombre }}</span> - {{ testix.puesto }}</p>
+                        <blockquote id="cuadro_testimonio">{{ testix.descripcion }}
+                            <p id="cuadro_testimonio" class="quote"><span id="nombreTestimonio">{{ testix.nombre }}</span> - {{ testix.puesto }}</p>
                         </blockquote>
                     </div>
                 </div>
@@ -122,7 +134,8 @@
     </div>
     <div class="row text-center">
         <div class="col-md-12 btn-email">
-            <a class="btn lowercase">martinarcosvargas2@gmail.com</a>
+            <!-- <a href="mailto:destinatario@ejemplo.com?subject=Asunto del correo&body=Cuerpo del correo" >Enviar correo</a> -->
+            <a class="btn lowercase" href="" >martinarcosvargas2@gmail.com</a>
         </div>
     </div>
 </section>

@@ -691,7 +691,7 @@ h2.menu-item:after {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #4dd133;
+    background: #20740f;
     content: '';
     opacity: 0.3
 }
@@ -1115,13 +1115,14 @@ h2.menu-item:after {
 }
 
 .progress-bar span {
+    border-radius: 100px;
     display: block;
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
     color: #000;
-    background: #F1F3F6;
+    background: #8d5490;
     font-weight: 500;
     position: absolute;
     top: -16px;

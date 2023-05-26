@@ -1,15 +1,36 @@
-#about{
-    background-color: #b6b1b7;
+#about {
+    background-color: #54908D;
 }
 
-p{
+#perfilResumen{
+    text-align: justify;
+}
+
+p {
     color: black;
 }
 
-span{
+span {
     color: black;
 }
 
-.col-sm-6{
+#nombreExperiencia{
+    color: black;
+}
+
+#fecha{
+    color: black;
+}
+
+.col-sm-6 {
+    color: black;
+}
+
+#div_testimonio{
+    background-color: #579054;
+}
+
+#cuadro_testimonio{
+    background-color: #905457;
     color: black;
 }
