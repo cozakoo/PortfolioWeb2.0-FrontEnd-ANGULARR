@@ -618,7 +618,7 @@ h2.portfolio.menu-item:before {
 }
 
 h2.contact.menu-item:before {
-    content: '03';
+    content: '02';
 }
 
 .menu-block:hover h2.menu-item:before {
